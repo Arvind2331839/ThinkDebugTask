@@ -4,7 +4,7 @@ require('dotenv').config();
 const ConnectDB = async () => {
     // console.log('hhhhhhhhhhhh')
   try {
-    await mongoose.connect("mongodb+srv://arvind:1qigH5rehgYiZHRu@cluster0.0zoqnty.mongodb.net/ThinkDebugTask");
+    await mongoose.connect(process.env.MONGO_URI);
     
     console.log('Database Connected');
 
